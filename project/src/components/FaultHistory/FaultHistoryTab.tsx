@@ -2,28 +2,41 @@ import { useState, useMemo } from 'react';
 import { Filter, XCircle } from 'lucide-react';
 import type { FaultHistory } from '../../types';
 
+// All fault types the backend can report (for dropdown even when history is empty)
+const KNOWN_FAULT_TYPES = [
+  'Fiber Cut',
+  'Device Failure',
+  'Link Congestion',
+  'Link Degradation',
+  'Flapping Interface',
+  'Routing Loop',
+  'Unknown',
+] as const;
+
 interface FaultHistoryTabProps {
   history: FaultHistory | null;
+  /** All district names from network overview (for filter dropdown) */
+  allDistricts?: string[];
 }
 
-export function FaultHistoryTab({ history }: FaultHistoryTabProps) {
+export function FaultHistoryTab({ history, allDistricts = [] }: FaultHistoryTabProps) {
   const [districtFilter, setDistrictFilter] = useState<string>('all');
   const [faultTypeFilter, setFaultTypeFilter] = useState<string>('all');
 
   const faults = history?.faults ?? [];
 
+  // District dropdown: "All Districts" + all available districts (from overview) + any from history
   const districts = useMemo(() => {
-    const unique = Array.from(
-      new Set(faults.map((f) => f.district ?? 'Unknown').filter((d) => d !== 'Unknown'))
-    ).sort();
-    return ['all', ...unique];
-  }, [faults]);
+    const fromHistory = faults.map((f) => f.district ?? '').filter(Boolean);
+    const combined = Array.from(new Set([...allDistricts, ...fromHistory])).filter(Boolean).sort();
+    return ['all', ...combined];
+  }, [allDistricts, faults]);
 
+  // Fault type dropdown: "All Fault Types" + known types
   const faultTypes = useMemo(() => {
-    const unique = Array.from(
-      new Set(faults.map((f) => f.root_cause).filter(Boolean))
-    ).sort();
-    return ['all', ...unique];
+    const fromHistory = faults.map((f) => f.root_cause).filter(Boolean);
+    const combined = Array.from(new Set([...KNOWN_FAULT_TYPES, ...fromHistory])).sort();
+    return ['all', ...combined];
   }, [faults]);
 
   const filteredFaults = useMemo(() => {

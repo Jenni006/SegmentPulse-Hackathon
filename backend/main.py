@@ -496,7 +496,7 @@ async def run_diagnosis():
     global last_diagnosis_time
 
     now = time.time()
-    if now - last_diagnosis_time < 15:
+    if now - last_diagnosis_time < 5:
         return {
             "timestamp":          datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "detection_mode":     "Automatic",
@@ -620,8 +620,16 @@ async def get_history():
     return {"faults": fault_history}
 
 
+def _district_for_village(village: str) -> str:
+    """Return district name for a village, or 'Unknown' if not found."""
+    for district, villages in DISTRICTS.items():
+        if village in villages:
+            return district
+    return "Unknown"
+
+
 @app.post("/simulate-fault")
-def simulate_fault(
+async def simulate_fault(
     segment:    str = Query(...),
     fault_type: str = Query(default="fiber_cut"),
     village:    str = Query(default="Ambattur"),
@@ -629,6 +637,7 @@ def simulate_fault(
     """
     Inject a controlled fault into a village segment.
     fault_type: fiber_cut | congestion | flapping | device_failure
+    Also appends the injection to fault history (in-memory + SQLite).
     """
     fault_profiles = {
         "fiber_cut":      {"rtt":   2.1, "loss": 100.0},
@@ -649,6 +658,30 @@ def simulate_fault(
             seg["status"]  = get_status(values["rtt"], values["loss"])
             seg["updated"] = datetime.now().strftime("%H:%M:%S")
             break
+
+    # Map fault_type to human-readable root_cause and action for history
+    root_cause_map = {
+        "fiber_cut":      ("Fiber Cut",         96, "Dispatch technician to segment"),
+        "congestion":     ("Link Congestion",   94, "Reroute traffic"),
+        "flapping":       ("Flapping Interface", 85, "Check SFP / transceiver"),
+        "device_failure": ("Device Failure",    91, "Reboot or replace device"),
+    }
+    root_cause, confidence, action = root_cause_map.get(
+        fault_type, ("Fiber Cut", 96, "Dispatch technician to segment")
+    )
+    affected = calculate_impact(segment)
+    district = _district_for_village(village)
+
+    await append_history({
+        "time":       datetime.now().strftime("%H:%M:%S"),
+        "village":    village,
+        "district":   district,
+        "segment":    segment,
+        "root_cause": root_cause,
+        "confidence": f"{confidence}%",
+        "action":     action,
+        "affected":   affected,
+    })
 
     return {
         "message":    f"Fault injected at {segment} in {village}",

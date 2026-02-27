@@ -4,15 +4,16 @@ import { SegmentTopology } from './SegmentTopology';
 import { FaultInjector } from './FaultInjector';
 import { apiService } from '../../services/api';
 import { usePolling } from '../../hooks/usePolling';
-import type { NetworkOverview, SegmentHealth, Village} from '../../types';
-
+import type { NetworkOverview, SegmentHealth, Village } from '../../types';
 
 interface VillageDrillDownTabProps {
   overview: NetworkOverview | null;
   selectedDistrict?: string;
+  /** Called after fault injection with (village, segment, faultType, district) so alert box can show immediately */
+  onFaultInjected?: (village: string, segment: string, faultType: string, district?: string) => void;
 }
 
-export function VillageDrillDownTab({ overview, selectedDistrict }: VillageDrillDownTabProps) {
+export function VillageDrillDownTab({ overview, selectedDistrict, onFaultInjected }: VillageDrillDownTabProps) {
   const [district, setDistrict] = useState<string>('');
   const [selectedVillage, setSelectedVillage] = useState<string | null>(null);
   const [segments, setSegments] = useState<SegmentHealth[]>([]);
@@ -56,18 +57,15 @@ export function VillageDrillDownTab({ overview, selectedDistrict }: VillageDrill
   const handleInjectFault = async (segment: string, faultType: string) => {
     if (selectedVillage) {
       await apiService.simulateFault(selectedVillage, segment, faultType);
-      // Trigger diagnosis immediately so fault gets logged to history
-      try {
-        await apiService.runDiagnosis();
-      } catch {
-        // ignore rate limit errors
-      }
+      onFaultInjected?.(selectedVillage, segment, faultType, district);
     }
   };
-  
+
   const handleClearFaults = async () => {
     if (selectedVillage) {
       await apiService.clearFaults(selectedVillage);
+      // Clear alert box by setting a healthy diagnosis
+      onFaultInjected?.('', '', '', undefined);
     }
   };
 
