@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+
+  backend:
+    build: ./segmentpulse-backend
+    container_name: segmentpulse-backend
+    ports:
+      - "8000:8000"
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    build: ./segmentpulse-frontend
+    container_name: segmentpulse-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+    restart: always

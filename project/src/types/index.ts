@@ -22,7 +22,16 @@ export interface NetworkSummary {
 
 export interface NetworkOverview {
   overview: DistrictData[];
-  summary: NetworkSummary;
+  summary: {
+    total_villages: number;
+    total_segments: number;
+    total_subscribers: number;
+    subscribers_per_village: number;
+    active_faults: number;
+    degraded: number;
+    healthy: number;
+    scale_note: string;
+  };
 }
 
 export interface DiagnosisResult {
@@ -35,9 +44,7 @@ export interface DiagnosisResult {
   isolation_time: string;
   recommended_action: string;
   status: string;
-  villages_scanned: number;
-  faults_found: number;
-  all_faults: FaultRecord[];
+  affected_users?: number;  
 }
 
 export interface FaultRecord {

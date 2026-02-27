@@ -4,7 +4,7 @@ import { NetworkOverviewTab } from './components/NetworkOverview/NetworkOverview
 import { VillageDrillDownTab } from './components/VillageDrillDown/VillageDrillDownTab';
 import { FaultHistoryTab } from './components/FaultHistory/FaultHistoryTab';
 import { usePolling } from './hooks/usePolling';
-import { apiService } from './services/api';
+import { apiService, runDiagnosisSafe } from './services/api';
 import type { TabType } from './types';
 
 function App() {
@@ -13,20 +13,20 @@ function App() {
 
   const { data: overview, error: overviewError } = usePolling(
     () => apiService.getNetworkOverview(),
-    10000
+    30000
   );
 
-  const { data: diagnosis, error: diagnosisError } = usePolling(
-    () => apiService.runDiagnosis(),
-    5000
+  const { data: diagnosis } = usePolling(
+    () => runDiagnosisSafe(),
+    30000
   );
 
   const { data: history, error: historyError } = usePolling(
     () => apiService.getFaultHistory(),
-    10000
+    30000
   );
 
-  const isConnected = !overviewError && !diagnosisError;
+  const isConnected = !overviewError ;
 
   const lastUpdated = new Date().toLocaleTimeString('en-US', {
     hour12: false,
@@ -85,7 +85,7 @@ function App() {
         {activeTab === 'history' && <FaultHistoryTab history={history} />}
       </main>
 
-      {(overviewError || diagnosisError || historyError) && (
+      {(overviewError || historyError) && (
         <div className="fixed bottom-4 right-4 bg-fault text-white px-6 py-3 rounded-lg shadow-lg font-mono text-sm">
           Connection error: Unable to reach API at http://127.0.0.1:8000
         </div>
