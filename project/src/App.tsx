@@ -26,6 +26,7 @@ function syntheticDiagnosisFromInjection(
     'Customer': 1, 'ONT': 1, 'Splitter': 8, 'Agg Switch': 32, 'Core': 1600, 'Gateway': 400000,
   };
   const affected_users = affectedMap[segment] ?? 32;
+  const isolationSeconds = (8 + Math.random() * 10).toFixed(1);
   return {
     timestamp: now,
     detection_mode: 'Manual (Injected)',
@@ -34,7 +35,7 @@ function syntheticDiagnosisFromInjection(
     packet_loss: m.packet_loss,
     root_cause: m.root_cause,
     confidence: m.confidence,
-    isolation_time: '< 1 second',
+    isolation_time: `${isolationSeconds} seconds`,
     affected_users,
     recommended_action: m.action,
     status: 'Action Required',

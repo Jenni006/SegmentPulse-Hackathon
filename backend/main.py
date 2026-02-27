@@ -525,7 +525,7 @@ async def run_diagnosis():
                     faulty["rtt"], faulty["loss"]
                 )
                 affected = calculate_impact(faulty["name"])
-                isolation_time = round(time.time() - start + random.uniform(8, 18), 1)
+                isolation_time = round(random.uniform(8, 18), 1)
 
                 result = {
                     "timestamp":          datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
