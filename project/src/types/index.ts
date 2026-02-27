@@ -9,15 +9,10 @@ export interface Village {
 export interface DistrictData {
   district: string;
   villages: Village[];
-}
-
-export interface NetworkSummary {
-  total_villages: number;
-  total_segments: number;
-  active_faults: number;
-  degraded: number;
   healthy: number;
-  tanfinet_scale: string;
+  degraded: number;
+  faults: number;
+  status: string;
 }
 
 export interface NetworkOverview {
@@ -30,6 +25,7 @@ export interface NetworkOverview {
     active_faults: number;
     degraded: number;
     healthy: number;
+    demo_villages: number;
     scale_note: string;
   };
 }
@@ -44,7 +40,10 @@ export interface DiagnosisResult {
   isolation_time: string;
   recommended_action: string;
   status: string;
-  affected_users?: number;  
+  affected_users?: number;
+  villages_scanned?: number;
+  faults_found?: number;
+  district?: string;
 }
 
 export interface FaultRecord {
@@ -55,6 +54,7 @@ export interface FaultRecord {
   root_cause: string;
   confidence: string;
   action: string;
+  affected?: number;
 }
 
 export interface FaultHistory {
@@ -63,13 +63,14 @@ export interface FaultHistory {
 
 export interface SegmentHealth {
   name: string;
-  status: 'HEALTHY' | 'DEGRADED' | 'FAULT';
+  status: 'HEALTHY' | 'DEGRADED' | 'FAILED';
   rtt: number;
   loss: number;
   updated: string;
 }
 
 export interface SegmentHealthResponse {
+  village: string;
   segments: SegmentHealth[];
 }
 

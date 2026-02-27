@@ -56,9 +56,15 @@ export function VillageDrillDownTab({ overview, selectedDistrict }: VillageDrill
   const handleInjectFault = async (segment: string, faultType: string) => {
     if (selectedVillage) {
       await apiService.simulateFault(selectedVillage, segment, faultType);
+      // Trigger diagnosis immediately so fault gets logged to history
+      try {
+        await apiService.runDiagnosis();
+      } catch {
+        // ignore rate limit errors
+      }
     }
   };
-
+  
   const handleClearFaults = async () => {
     if (selectedVillage) {
       await apiService.clearFaults(selectedVillage);
