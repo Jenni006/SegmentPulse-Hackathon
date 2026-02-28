@@ -31,244 +31,244 @@ USERS_PER_SPLITTER      = 8
 # 20 DISTRICTS x 50 VILLAGES = 1,000 DEMO VILLAGES
 DISTRICTS: dict[str, list[str]] = {
     "Chennai": [
-        "Ambattur", "Avadi", "Thiruvallur", "Ponneri", "Gummidipoondi",
-        "Tiruttani", "Uthukottai", "Pallipattu", "Sholavaram", "Madhavaram",
-        "Perambur", "Villivakkam", "Kodambakkam", "Adyar", "Velachery",
-        "Tambaram", "Chrompet", "Pallavaram", "Guduvanchery", "Maraimalai Nagar",
-        "Vandalur", "Urapakkam", "Porur", "Maduravoyal", "Mogappair",
-        "Korattur", "Pattabiram", "Nerkundram", "Koyambedu", "Arumbakkam",
-        "Saligramam", "Valasaravakkam", "Virugambakkam", "Ashok Nagar", "KK Nagar",
-        "Vadapalani", "Saidapet", "Guindy", "St Thomas Mount", "Meenambakkam",
-        "Tirusulam", "Perungalathur", "Selaiyur", "Medavakkam", "Sholinganallur",
-        "Perungudi", "Thoraipakkam", "Siruseri", "Kelambakkam", "Navalur"
+        "Ambattur", "Avadi", "Sholavaram", "Madhavaram", "Perambur",
+        "Villivakkam", "Kodambakkam", "Adyar", "Velachery", "Tambaram",
+        "Chrompet", "Pallavaram", "Guduvanchery", "Vandalur", "Urapakkam",
+        "Porur", "Maduravoyal", "Mogappair", "Korattur", "Pattabiram",
+        "Nerkundram", "Koyambedu", "Arumbakkam", "Saligramam", "Valasaravakkam",
+        "Virugambakkam", "Ashok Nagar", "Vadapalani", "Saidapet", "Guindy",
+        "Meenambakkam", "Tirusulam", "Perungalathur", "Selaiyur", "Medavakkam",
+        "Sholinganallur", "Perungudi", "Thoraipakkam", "Siruseri", "Kelambakkam",
+        "Navalur", "Injambakkam", "Neelankarai", "Palavakkam", "Thiruvanmiyur",
+        "Mylapore", "Triplicane", "Royapettah", "Egmore", "Kilpauk"
     ],
     "Coimbatore": [
         "Pollachi", "Mettupalayam", "Tirupur", "Palladam", "Udumalpet",
-        "Valparai", "Anaimalai", "Kinathukadavu", "Madukkarai", "Sulur",
+        "Valparai", "Anaimalai", "Kinathukadavu-CBE", "Madukkarai", "Sulur",
         "Peelamedu", "Singanallur", "Saravanampatti", "Thudiyalur", "Kalapatti",
         "Ganapathy", "Uppilipalayam", "Ondipudur", "Kovaipudur", "Perur",
-        "Annur", "Avinashi", "Kangeyam", "Dharapuram", "Gobichettipalayam",
-        "Sathyamangalam", "Bhavani", "Anthiyur", "Nambiyur", "Kavundampalayam",
-        "Vadavalli", "Podanur", "Irugur", "Thondamuthur", "Chettipalayam",
-        "Kuniyamuthur", "Vellalore", "Thanneer Pandal", "Kurichi", "Koilmedu",
-        "Edayarpalayam", "Sugunapuram", "Selvapuram", "Ram Nagar", "Gandhi Nagar",
-        "Nehru Nagar", "Pappanaickenpalayam", "Sundarapuram", "Sowripalayam", "Ramanathapuram"
+        "Annur", "Avinashi", "Kavundampalayam", "Vadavalli", "Podanur",
+        "Irugur", "Thondamuthur", "Chettipalayam", "Kuniyamuthur", "Vellalore",
+        "Thanneer Pandal", "Kurichi-CBE", "Koilmedu", "Edayarpalayam", "Sugunapuram",
+        "Selvapuram", "Pappanaickenpalayam", "Sundarapuram", "Sowripalayam", "Othakalmandapam",
+        "Narasimhanaickenpalayam", "Veerakeralam", "Zamin Uthukuli", "Tiruchitrambalam", "Idikarai",
+        "Pooluvapatti", "Sarcarsamakulam", "Negamam", "Kangeyam-CBE", "Dharapuram-CBE"
     ],
     "Madurai": [
-        "Melur", "Thirumangalam", "Usilampatti", "Natham", "Nilakottai",
-        "Oddanchatram", "Palani", "Kodaikanal", "Batlagundu", "Vadipatti",
+        "Melur", "Thirumangalam", "Usilampatti", "Natham-MDU", "Vadipatti",
         "Peraiyur", "Tiruppuvanam", "Manamadurai", "Karaikudi", "Devakottai",
-        "Tiruppattur", "Paramakudi", "Rameswaram", "Mandapam", "Keelakarai",
-        "Kilakkarai", "Ervadi", "Arupukkottai", "Sattur", "Virudhunagar",
-        "Srivilliputhur", "Rajapalayam", "Sivakasi", "Eral", "Ettayapuram",
-        "Kovilpatti", "Ottapidaram", "Mudukulathur", "Kalaiyarkoil", "Ilayangudi",
-        "Kamudi", "Tiruvadanai", "Nainarkoil", "Sayalkudi", "Mimisal",
-        "Muthukulathur", "Alangulam", "Watrap", "Vembakottai", "Krishnankoil",
-        "Tiruchuli", "Aruppukkottai", "Sivaganga", "Kallal", "Madurakoodam"
+        "Tiruppattur-MDU", "Paramakudi-MDU", "Mandapam-MDU", "Keelakarai-MDU", "Kilakkarai-MDU",
+        "Ervadi-MDU", "Arupukkottai-MDU", "Sattur-MDU", "Sivakasi-MDU", "Eral-MDU",
+        "Ettayapuram-MDU", "Mudukulathur-MDU", "Kalaiyarkoil-MDU", "Ilayangudi-MDU", "Kamudi-MDU",
+        "Tiruvadanai-MDU", "Nainarkoil-MDU", "Sayalkudi-MDU", "Mimisal-MDU", "Muthukulathur-MDU",
+        "Kallal", "Madurakoodam", "Sholavandan", "Kottampatti", "Sedapatti",
+        "Kondayampatti", "T Kallupatti", "Chellampatti", "Ponnamaravathi-MDU", "Palamedu",
+        "Veerapandi-MDU", "Samayanallur", "Othakadai", "Anaiyur", "Kochadai",
+        "Vilangudi", "Paravai", "Thenipatti-MDU", "Sriramapuram-MDU", "Pattiveeranpatti"
     ],
     "Salem": [
         "Omalur", "Mettur", "Namakkal", "Rasipuram", "Tiruchengode",
         "Sankari", "Edappadi", "Attur", "Yercaud", "Valapady",
-        "Thalaivasal", "Gangavalli", "Mallur", "Kadayampatti", "Kolathur",
+        "Thalaivasal", "Gangavalli", "Mallur", "Kadayampatti", "Kolathur-SLM",
         "Mecheri", "Nangavalli", "Konganapuram", "Suramangalam", "Kannankurichi",
         "Shevapet", "Ammapet", "Hasthampatti", "Gugai", "Fairlands",
-        "Five Roads", "Swarnapuri", "Neikarapatti", "Ayodhyapattanam", "Karuppur",
-        "Idappadi", "Valappadi", "Thumbal", "Panamarathupatti", "Narasothipatti",
-        "Mettupatti", "Veerapandi", "Nethimedu", "Erumapalayam", "Kitchipalayam",
-        "Alagapuram", "Kondalampatti", "Venkatamangalam", "Ponnaikuttai", "Manavadi",
-        "Senapathipalayam", "Dasanaickenpatti", "Magudanchavadi", "Pethanaikenpalayam", "Mecheri Dam"
+        "Swarnapuri", "Neikarapatti", "Ayodhyapattanam", "Karuppur-SLM", "Idappadi",
+        "Valappadi", "Panamarathupatti", "Narasothipatti", "Nethimedu", "Erumapalayam",
+        "Kitchipalayam", "Alagapuram", "Kondalampatti", "Venkatamangalam-SLM", "Ponnaikuttai",
+        "Senapathipalayam", "Dasanaickenpatti", "Magudanchavadi", "Thumbal-SLM", "Kakapalayam",
+        "Muthampatty", "Pethanaickenpalayam", "Jalakandapuram", "Veerapandi-SLM", "Mettupatti-SLM"
     ],
     "Tirunelveli": [
-        "Nanguneri", "Palayamkottai", "Tenkasi", "Nagercoil", "Shenkottai",
-        "Sankarankovil", "Radhapuram", "Thisayanvilai", "Valliyur", "Cheranmahadevi",
-        "Alangulam", "Kadayam", "Ambasamudram", "Papanasam", "Mukkudal",
-        "Sivagiri", "Veerakeralampudur", "Kallidaikurichi", "Eruvadi", "Manimuthar",
-        "Courtallam", "Pottalpudur", "Ilanji", "Melapalayam", "Pettai",
-        "Vannarpet", "Maharajanagar", "Krishnapuram", "Perumalpuram", "Sivasubramaniya Nagar",
-        "Keelapavoor", "Puliyangudi", "Kadayanallur", "Seppankulam", "Gangaikondan",
-        "Kuruvikulam", "Pavoorchatram", "Melaneelithanallur", "Thiruvenkatam", "Mudalur",
-        "Panpoli", "Thirukkurungudi", "Karunkulam", "Peykulam", "Vadakku Valliyur",
-        "Ayaneri", "Moolakaraipatti", "Therkku Valliyur", "Mimisal", "De Monte Colony"
+        "Nanguneri", "Palayamkottai", "Tenkasi", "Shenkottai", "Sankarankovil",
+        "Radhapuram", "Thisayanvilai", "Valliyur", "Cheranmahadevi", "Kadayam",
+        "Ambasamudram", "Mukkudal", "Veerakeralampudur", "Kallidaikurichi", "Eruvadi-TVL",
+        "Manimuthar", "Pottalpudur", "Ilanji", "Melapalayam", "Pettai-TVL",
+        "Vannarpet", "Maharajanagar", "Krishnapuram-TVL", "Perumalpuram", "Keelapavoor",
+        "Puliyangudi", "Kadayanallur", "Seppankulam", "Gangaikondan", "Kuruvikulam",
+        "Pavoorchatram", "Melaneelithanallur", "Thiruvenkatam-TVL", "Mudalur-TVL", "Panpoli",
+        "Thirukkurungudi", "Karunkulam", "Peykulam", "Vadakku Valliyur", "Ayaneri",
+        "Moolakaraipatti", "Therkku Valliyur", "Nangavarkurichi", "Unnamalaikadai", "Suthamalli",
+        "Alwarkurichi", "Keela Eral", "Mela Eral", "Paapanasam-TVL", "Achankovil"
     ],
     "Tiruchirappalli": [
         "Srirangam", "Woraiyur", "Ariyamangalam", "Thuvakudi", "Manachanallur",
         "Manapparai", "Musiri", "Thuraiyur", "Lalgudi", "Marungapuri",
-        "Pullambadi", "Uppiliapuram", "Andanallur", "Kollidam", "Thiruverambur",
-        "Sennirkuppam", "Kallakudi", "Arumbavur", "Perambalur", "Veppanthattai",
-        "Kunnam", "Alathur", "Kurumbalur", "Poolambadi", "Veppur",
-        "Senapathy", "Sirugamani", "Thirumuruganpoondi", "Inam Kulathur", "Punjai Thottakurichi",
-        "Kaithathankurichi", "Keeranur", "Aravakurichi", "Kulithalai", "Krishnarayapuram",
-        "Pugalur", "Nangavaram", "Nerinjipettai", "Sendurai", "Jayamkondam",
-        "Ariyalur", "Andimadam", "Udayarpalayam", "Tittakudi", "Virudhachalam",
-        "Panruti", "Kurinjipadi", "Neyveli", "Sirkazhi", "Chidambaram"
+        "Pullambadi", "Uppiliapuram", "Andanallur", "Thiruverambur", "Sennirkuppam",
+        "Kallakudi", "Arumbavur", "Perambalur", "Veppanthattai-TRY", "Kunnam-TRY",
+        "Alathur-TRY", "Kurumbalur", "Poolambadi", "Veppur-TRY", "Sirugamani",
+        "Thirumuruganpoondi", "Punjai Thottakurichi", "Keeranur-TRY", "Aravakurichi", "Kulithalai",
+        "Krishnarayapuram", "Pugalur", "Nangavaram-TRY", "Nerinjipettai-TRY", "Sendurai",
+        "Jayamkondam-TRY", "Andimadam-TRY", "Udayarpalayam-TRY", "Tittakudi-TRY", "Panruti-TRY",
+        "Kurinjipadi-TRY", "Thottiam-TRY", "Vaiyampatti", "Pettavaithalai", "Kallagam",
+        "Koothappar", "Kattur", "Thennur", "Bhuvanagiri-TRY", "Kollidam-TRY"
     ],
     "Thanjavur": [
-        "Kumbakonam", "Papanasam", "Pattukottai", "Peravurani", "Orathanadu",
-        "Thiruvaiyaru", "Budalur", "Seerkazhi", "Sirkazhi", "Mayiladuthurai",
-        "Kuthalam", "Kollidam", "Nagapattinam", "Vedaranyam", "Thiruthuraipoondi",
-        "Thiruvidaimarudur", "Swamimalai", "Darasuram", "Gangaikondacholapuram", "Jayamkondam",
-        "Ariyalur", "Andimadam", "Udayarpalayam", "Tittakudi", "Virudhachalam",
-        "Panruti", "Kurinjipadi", "Chidambaram", "Kattumannarkoil", "Bhuvanagiri",
-        "Srimushnam", "Parangipettai", "Neyveli", "Vridhachalam", "Ulundurpet",
-        "Sankarapuram", "Kallakurichi", "Tirukoilur", "Villupuram", "Tindivanam",
-        "Vanur", "Vikravandi", "Mailam", "Gingee", "Tiruvannamalai",
-        "Polur", "Arni", "Cheyyar", "Vandavasi", "Tiruttani"
+        "Kumbakonam", "Pattukottai", "Peravurani", "Orathanadu", "Thiruvaiyaru",
+        "Budalur", "Seerkazhi-THJ", "Mayiladuthurai-THJ", "Kuthalam-THJ", "Vedaranyam-THJ",
+        "Thiruthuraipoondi-THJ", "Thiruvidaimarudur-THJ", "Swamimalai", "Darasuram", "Gangaikondacholapuram",
+        "Kattumannarkoil-THJ", "Srimushnam-THJ", "Parangipettai-THJ", "Neyveli-THJ", "Vridhachalam-THJ",
+        "Ulundurpet-THJ", "Sankarapuram-THJ", "Kallakurichi-THJ", "Tirukoilur-THJ", "Vikravandi-THJ",
+        "Mailam-THJ", "Gingee-THJ", "Vandavasi-THJ", "Papanasam-THJ", "Needamangalam",
+        "Thiruvanchiyam", "Thirukattupalli", "Ammapettai", "Ayyampettai", "Nannilam",
+        "Thirubuvanam", "Kumbakonam East", "Kumbakonam West", "Perumagalur-THJ", "Labbaikudikadu",
+        "Thirumarugal", "Kollidam-THJ", "Thanjavur East", "Thanjavur West", "Thanjavur North",
+        "Thanjavur South", "Papanasam-TJR", "Pattukkottai-THJ", "Veppanthattai-THJ", "Sirkazhi-THJ"
     ],
     "Vellore": [
         "Katpadi", "Gudiyatham", "Vaniyambadi", "Ambur", "Jolarpettai",
-        "Tirupattur", "Natrampalli", "Uthangarai", "Dharmapuri", "Harur",
-        "Pappireddipatti", "Nallampalli", "Pennagaram", "Karimangalam", "Morappur",
-        "Palacodu", "Hosur", "Krishnagiri", "Pochampalli", "Bargur",
-        "Denkanikottai", "Shoolagiri", "Kelamangalam", "Mathigiri", "Thally",
-        "Anchetty", "Rayakottah", "Kaveripakkam", "Arcot", "Ranipet",
-        "Walajah", "Sholinghur", "Arakkonam", "Nemili", "Kanchipuram",
-        "Uthiramerur", "Madurantakam", "Chengalpattu", "Sriperumbudur", "Singaperumalkoil",
-        "Walajabad", "Cheyyur", "Thirukalukundram", "Kunrathur", "Poonamallee",
-        "Thiruverkadu", "Maduravoyal", "Korattur", "Pattabiram", "Nerkundram"
+        "Tirupattur-VLR", "Natrampalli", "Uthangarai-VLR", "Harur", "Pappireddipatti",
+        "Nallampalli", "Pennagaram", "Karimangalam", "Morappur", "Palacodu",
+        "Kaveripakkam-VLR", "Arcot", "Ranipet", "Walajah", "Sholinghur",
+        "Arakkonam", "Nemili", "Walajabad-VLR", "Cheyyar-VLR", "Vellore Fort",
+        "Sathuvachari", "Kosapet", "Viruthampet", "Paradarami", "Alangayam-VLR",
+        "Kaniyambadi", "Melalathur", "Anaicut", "Virinchipuram", "Vedanthangal",
+        "Pernambut", "Odugathur", "Brammapuram", "Kalavai", "Alangur-VLR",
+        "Timiri", "Porpanaikuppam", "Uthiramerur-VLR", "Madurantakam-VLR", "Sriperumbudur-VLR",
+        "Kunrathur-VLR", "Thirukalukundram-VLR", "Poonamallee-VLR", "Cheyyur-VLR2", "Singaperumalkoil-VLR"
     ],
     "Erode": [
         "Gobichettipalayam", "Sathyamangalam", "Bhavani", "Anthiyur", "Nambiyur",
-        "Kodumudi", "Perundurai", "Thindal", "Veerappanchatram", "Sivagiri",
-        "Surampatti", "Kasipalayam", "Kavindapadi", "Modakurichi", "Chithode",
-        "Vijayamangalam", "Ammapet", "Punjai Puliampatti", "Ingur", "Dharapuram",
-        "Kangeyam", "Palladam", "Tirupur", "Avinashi", "Sulur",
-        "Annur", "Mettupalayam", "Kinathukadavu", "Pollachi", "Valparai",
-        "Udumalpet", "Palani", "Natham", "Dindigul", "Nilakottai",
-        "Batlagundu", "Kodaikanal", "Theni", "Uthamapalayam", "Bodinayakanur",
-        "Andipatti", "Periyakulam", "Gudalur", "Usilampatti", "Melur",
-        "Tirumangalam", "Oddanchatram", "Vedasandur", "Athoor", "Shanarpatti"
+        "Kodumudi", "Perundurai", "Thindal", "Veerappanchatram", "Surampatti",
+        "Kasipalayam-ERD", "Kavindapadi", "Modakurichi", "Chithode", "Vijayamangalam",
+        "Punjai Puliampatti", "Ingur-ERD", "Dharapuram-ERD", "Kangeyam-ERD", "Palladam-ERD",
+        "Avinashi-ERD", "Annur-ERD", "Bhavani Sagar", "Thalavadi", "Bhavanisagar",
+        "Vellithiruppur", "Uthiyur", "Vavipalayam", "Pallipalayam", "Veerapandi-ERD",
+        "Nanjundapuram", "Siruvalur", "Avalpoondurai", "Hasanur", "Germalam",
+        "Talavadi-ERD", "Unjalur", "Vellode", "Odathurai", "Chennimalai",
+        "Ammapettai-ERD", "Nanjai Punjai", "Kalingarayan", "Mudis", "Kotabagi",
+        "Satyamangalam-ERD", "Sivagiri-ERD", "Kasipalayam-ERD2", "Bargur-ERD", "Veerappanchatram-ERD"
     ],
     "Dindigul": [
-        "Palani", "Oddanchatram", "Natham", "Nilakottai", "Batlagundu",
-        "Kodaikanal", "Vedasandur", "Athoor", "Shanarpatti", "Reddiyarchatram",
-        "Chinnalapatti", "Nehru Nagar", "Gandhi Nagar", "Anna Nagar", "Thirunagar",
-        "Ponmalaipatti", "Sempatti", "Vadamadurai", "Ayyalur", "Pachalur",
-        "Gujiliamparai", "Arittapatti", "Silamalai", "Thadikombu", "Kallimandayam",
+        "Oddanchatram", "Vedasandur", "Athoor", "Shanarpatti", "Reddiyarchatram",
+        "Chinnalapatti-DGL", "Ponmalaipatti", "Sempatti", "Vadamadurai", "Ayyalur-DGL",
+        "Pachalur", "Gujiliamparai", "Arittapatti", "Silamalai", "Thadikombu",
         "Dindigul East", "Dindigul West", "Begampur", "Mullipadi", "Mundurampatti",
-        "Thottiam", "Musiri", "Manapparai", "Thuraiyur", "Lalgudi",
-        "Marungapuri", "Pullambadi", "Uppiliapuram", "Andanallur", "Kollidam",
-        "Thiruverambur", "Sennirkuppam", "Kallakudi", "Arumbavur", "Perambalur",
-        "Veppanthattai", "Kunnam", "Alathur", "Kurumbalur", "Poolambadi"
+        "Sithayankottai", "Kallimandayam", "Kodaikanal-DGL", "Batlagundu-DGL", "Natham-DGL",
+        "Keeranur-DGL", "Palani-DGL", "Ayakudi", "Pattiveeranpatti-DGL", "Sriramapuram-DGL",
+        "Thottiam-DGL", "Palayam-DGL", "Nilakottai-DGL", "Gandhi Nagar-DGL", "Anna Nagar-DGL",
+        "Nehru Nagar-DGL", "Thirunagar-DGL", "Vadamadurai-DGL", "Sempatti-DGL", "Ponmalaipatti-DGL",
+        "Vedasandur-DGL", "Shanarpatti-DGL", "Oddanchatram-DGL", "Reddiyarchatram-DGL", "Athoor-DGL",
+        "Cumbum-DGL", "Gudalur-DGL", "Bodinayakanur-DGL", "Andipatti-DGL", "Periyakulam-DGL"
     ],
     "Kanchipuram": [
         "Sriperumbudur", "Uttiramerur", "Madurantakam", "Chengalpattu", "Singaperumalkoil",
-        "Walajabad", "Kancheepuram", "Cheyyur", "Thirukalukundram", "Kunrathur",
-        "Poonamallee", "Thiruverkadu", "Maduravoyal", "Ambattur", "Avadi",
-        "Tiruvallur", "Ponneri", "Gummidipoondi", "Sholavaram", "Madhavaram",
-        "Perambur", "Villivakkam", "Pattabiram", "Nerkundram", "Koyambedu",
-        "Arumbakkam", "Saligramam", "Valasaravakkam", "Virugambakkam", "Ashok Nagar",
-        "KK Nagar", "Vadapalani", "Saidapet", "Guindy", "St Thomas Mount",
-        "Meenambakkam", "Tirusulam", "Perungalathur", "Selaiyur", "Medavakkam",
-        "Sholinganallur", "Perungudi", "Thoraipakkam", "Siruseri", "Kelambakkam",
-        "Navalur", "Vandalur", "Urapakkam", "Porur", "Guduvanchery"
+        "Walajabad-KCP", "Kancheepuram", "Thirukalukundram", "Kunrathur-KCP", "Poonamallee-KCP",
+        "Uthiramerur-KCP", "Kattankolathur", "Padappai", "Paranur", "Tiruporur",
+        "Kovalam", "Kanathur", "Muttukadu", "Puzhuthivakkam", "Kolapakkam",
+        "Gerugambakkam", "Peerkankaranai", "Chitlapakkam", "Mudichur", "Tambaram Sanatorium",
+        "Thirumudivakkam", "Pozhichalur", "Vanuvampet", "Perungalathur-KCP", "Selaiyur-KCP",
+        "Medavakkam-KCP", "Sholinganallur-KCP", "Perungudi-KCP", "Siruseri-KCP", "Kelambakkam-KCP",
+        "Navalur-KCP", "Injambakkam-KCP", "Neelankarai-KCP", "Palavakkam-KCP", "Thiruvanmiyur-KCP",
+        "Guduvanchery-KCP", "Urapakkam-KCP", "Maraimalai Nagar-KCP", "Vandalur-KCP", "Tambaram-KCP",
+        "Chrompet-KCP", "Pallavaram-KCP", "Cheyyur-KCP", "Madurantakam-KCP", "Singaperumalkoil-KCP"
     ],
     "Cuddalore": [
-        "Chidambaram", "Kattumannarkoil", "Bhuvanagiri", "Srimushnam", "Parangipettai",
-        "Neyveli", "Vridhachalam", "Ulundurpet", "Sankarapuram", "Kallakurichi",
-        "Tirukoilur", "Villupuram", "Tindivanam", "Vanur", "Vikravandi",
-        "Mailam", "Gingee", "Panruti", "Kurinjipadi", "Tittakudi",
-        "Virudhachalam", "Jayamkondam", "Ariyalur", "Andimadam", "Udayarpalayam",
-        "Perambalur", "Veppanthattai", "Kunnam", "Alathur", "Kurumbalur",
-        "Poolambadi", "Veppur", "Sirugamani", "Thirumuruganpoondi", "Inam Kulathur",
-        "Punjai Thottakurichi", "Keeranur", "Aravakurichi", "Kulithalai", "Krishnarayapuram",
-        "Pugalur", "Nangavaram", "Nerinjipettai", "Sendurai", "Musiri",
-        "Thuraiyur", "Lalgudi", "Marungapuri", "Pullambadi", "Uppiliapuram"
+        "Chidambaram", "Kattumannarkoil-CDL", "Bhuvanagiri-CDL", "Parangipettai-CDL", "Vridhachalam-CDL",
+        "Ulundurpet-CDL", "Sankarapuram-CDL", "Kallakurichi-CDL", "Tirukoilur-CDL", "Villupuram-CDL",
+        "Tindivanam-CDL", "Vanur-CDL", "Vikravandi-CDL", "Mailam-CDL", "Gingee-CDL",
+        "Panruti", "Kurinjipadi-CDL", "Tittakudi-CDL", "Virudhachalam-CDL", "Jayamkondam-CDL",
+        "Ariyalur-CDL", "Andimadam-CDL", "Udayarpalayam-CDL", "Perambalur-CDL", "Veppanthattai-CDL",
+        "Kunnam-CDL", "Alathur-CDL", "Kurumbalur-CDL", "Poolambadi-CDL", "Veppur-CDL",
+        "Sirugamani-CDL", "Keeranur-CDL", "Aravakurichi-CDL", "Kulithalai-CDL", "Pugalur-CDL",
+        "Nangavaram-CDL", "Nerinjipettai-CDL", "Sendurai-CDL", "Musiri-CDL", "Thuraiyur-CDL",
+        "Lalgudi-CDL", "Marungapuri-CDL", "Pullambadi-CDL", "Uppiliapuram-CDL", "Andanallur-CDL",
+        "Kollidam-CDL", "Thiruverambur-CDL", "Sennirkuppam-CDL", "Kallakudi-CDL", "Arumbavur-CDL"
     ],
     "Nagapattinam": [
-        "Mayiladuthurai", "Kuthalam", "Kollidam", "Vedaranyam", "Thiruthuraipoondi",
-        "Thiruvidaimarudur", "Sirkazhi", "Seerkazhi", "Kumbakonam", "Papanasam",
-        "Thiruvaiyaru", "Budalur", "Pattukottai", "Peravurani", "Orathanadu",
-        "Swamimalai", "Darasuram", "Gangaikondacholapuram", "Nagapattinam Town", "Nagore",
-        "Velankanni", "Akkaraipettai", "Thalaignayiru", "Sembanarkoil", "Poompuhar",
-        "Tarangambadi", "Tranquebar", "Karaikkal", "Thirunallar", "Neravy",
-        "Tirumalairayanpattinam", "Killai", "Parangipettai", "Chidambaram", "Kattumannarkoil",
-        "Bhuvanagiri", "Srimushnam", "Panruti", "Kurinjipadi", "Tittakudi",
-        "Virudhachalam", "Ulundurpet", "Sankarapuram", "Kallakurichi", "Tirukoilur",
-        "Villupuram", "Tindivanam", "Vanur", "Vikravandi", "Mailam"
+        "Mayiladuthurai", "Kuthalam-NGP", "Kollidam-NGP", "Vedaranyam-NGP", "Thiruthuraipoondi-NGP",
+        "Thiruvidaimarudur-NGP", "Sirkazhi-NGP", "Nagapattinam Town", "Nagore", "Velankanni",
+        "Akkaraipettai", "Thalaignayiru", "Sembanarkoil-NGP", "Poompuhar", "Tarangambadi",
+        "Tranquebar", "Karaikkal", "Thirunallar", "Neravy", "Tirumalairayanpattinam",
+        "Killai", "Sirkali-NGP", "Tharangambadi-NGP", "Keelaiyur", "Keelvelur",
+        "Vaimedu", "Keezhathottam", "Nidur", "Thalainayar", "Thirukuvalai",
+        "Papanasam-NGP", "Nannilam-NGP", "Needamangalam-NGP", "Thirumarugal-NGP", "Labbaikudikadu-NGP",
+        "Perumagalur-NGP", "Kollidam East-NGP", "Kollidam West-NGP", "Kollidam North-NGP", "Kollidam South-NGP",
+        "Sembanarkoil North", "Sembanarkoil South", "Nagapattinam Port", "Nagapattinam Rural", "Nagapattinam Urban",
+        "Vedaranyam North", "Vedaranyam South", "Thiruthuraipoondi North", "Thiruthuraipoondi South", "Mayiladuthurai Rural"
     ],
     "Theni": [
-        "Uthamapalayam", "Bodinayakanur", "Andipatti", "Periyakulam", "Gudalur",
+        "Uthamapalayam", "Bodinayakanur", "Andipatti-THN", "Periyakulam-THN", "Gudalur-THN",
         "Theni Town", "Cumbum", "Kambam", "Rajakkad", "Chinnamanur",
         "Kandamanur", "Thamaraikulam", "Bodi", "Thandikudi", "Highwavys",
-        "Dombucherry", "Vellimalai", "Chinnalapatti", "Veerapandi", "Melacheval",
-        "Devathanapatti", "Dharmalingampatti", "Allinagaram", "Poilkayar", "Lakshmipuram",
-        "Thevaram", "Pallipatti", "Vadugapatti", "Keeripatti", "Kottaikadu",
-        "Kuppanur", "Marappakudi", "Muthukrishnapuram", "Narayanathevanpatti", "Odaipatti",
-        "Periyar Nagar", "Pichanoor", "Pullukattu", "Rasingapuram", "Silamarathupatti",
-        "Solaipatti", "Sundarapandiam", "Thenipatti", "Usilampatti", "Vattuvanpatti",
-        "Vellaichamy Nagar", "Peria Suriyanpatti", "Punjai Puliampatti", "Sankaran Kovil", "Sivagiri"
+        "Dombucherry", "Vellimalai", "Melacheval", "Devathanapatti", "Dharmalingampatti",
+        "Allinagaram", "Lakshmipuram-THN", "Pallipatti-THN", "Vadugapatti-THN", "Keeripatti",
+        "Kottaikadu", "Kuppanur-THN", "Marappakudi", "Muthukrishnapuram", "Odaipatti",
+        "Periyar Nagar-THN", "Pichanoor", "Rasingapuram", "Silamarathupatti-THN", "Solaipatti-THN",
+        "Sundarapandiam", "Vattuvanpatti", "Vellaichamy Nagar", "Peria Suriyanpatti", "Pulikuthi",
+        "Thevaram-THN", "Chinnalapatti-THN", "Veerapandi-THN", "Poilkayar", "Munanjipatti",
+        "Kottaiyur-THN", "Usilampatti-THN", "Kamayagoundanpatti", "Andipatty-THN", "Cumbum North"
     ],
     "Virudhunagar": [
-        "Sivakasi", "Srivilliputhur", "Rajapalayam", "Watrap", "Vembakottai",
-        "Krishnankoil", "Tiruchuli", "Aruppukkottai", "Sattur", "Kariapatti",
-        "Mallankinaru", "Narikudi", "Puliyangudi", "Kadayanallur", "Sankarankovil",
-        "Radhapuram", "Thisayanvilai", "Valliyur", "Cheranmahadevi", "Alangulam",
-        "Kadayam", "Ambasamudram", "Papanasam", "Mukkudal", "Sivagiri",
-        "Veerakeralampudur", "Kallidaikurichi", "Eruvadi", "Manimuthar", "Courtallam",
-        "Pottalpudur", "Ilanji", "Melapalayam", "Pettai", "Vannarpet",
-        "Maharajanagar", "Krishnapuram", "Perumalpuram", "Keelapavoor", "Seppankulam",
-        "Gangaikondan", "Kuruvikulam", "Pavoorchatram", "Melaneelithanallur", "Thiruvenkatam",
-        "Mudalur", "Panpoli", "Thirukkurungudi", "Karunkulam", "Peykulam"
+        "Sivakasi-VRN", "Srivilliputhur", "Rajapalayam", "Watrap", "Vembakottai",
+        "Krishnankoil", "Tiruchuli", "Aruppukkottai-VRN", "Sattur-VRN", "Kariapatti",
+        "Mallankinaru", "Narikudi", "Puliyangudi-VRN", "Kadayanallur-VRN", "Sankarankovil-VRN",
+        "Radhapuram-VRN", "Thisayanvilai-VRN", "Valliyur-VRN", "Cheranmahadevi-VRN", "Alangulam-VRN",
+        "Kadayam-VRN", "Ambasamudram-VRN", "Mukkudal-VRN", "Veerakeralampudur-VRN", "Kallidaikurichi-VRN",
+        "Eruvadi-VRN", "Manimuthar-VRN", "Pottalpudur-VRN", "Ilanji-VRN", "Melapalayam-VRN",
+        "Pettai-VRN", "Vannarpet-VRN", "Keelapavoor-VRN", "Seppankulam-VRN", "Gangaikondan-VRN",
+        "Kuruvikulam-VRN", "Pavoorchatram-VRN", "Thiruvenkatam-VRN", "Mudalur-VRN", "Thirukkurungudi-VRN",
+        "Karunkulam-VRN", "Peykulam-VRN", "Sivagiri-VRN", "Panpoli-VRN", "Maharajanagar-VRN",
+        "Krishnapuram-VRN", "Perumalpuram-VRN", "Melaneelithanallur-VRN", "Nangavarkurichi-VRN", "Unnamalaikadai-VRN"
     ],
     "Thoothukudi": [
-        "Kovilpatti", "Ottapidaram", "Eral", "Ettayapuram", "Thisayanvilai",
-        "Kayalpattinam", "Tiruchendur", "Srivaikuntam", "Alwarthirunagari", "Authoor",
-        "Nazareth", "Manapad", "Uvari", "Periavilai", "Arumuganeri",
-        "Kulasekarapatnam", "Punnakayal", "Palayamkottai", "Tenkasi", "Nagercoil",
-        "Shenkottai", "Sankarankovil", "Radhapuram", "Valliyur", "Cheranmahadevi",
-        "Alangulam", "Ambasamudram", "Papanasam", "Mukkudal", "Sivagiri",
-        "Kallidaikurichi", "Eruvadi", "Manimuthar", "Courtallam", "Ilanji",
-        "Melapalayam", "Pettai", "Maharajanagar", "Krishnapuram", "Keelapavoor",
-        "Puliyangudi", "Kadayanallur", "Seppankulam", "Gangaikondan", "Kuruvikulam",
-        "Pavoorchatram", "Thiruvenkatam", "Mudalur", "Thirukkurungudi", "Karunkulam"
+        "Kovilpatti", "Ottapidaram", "Eral-TDK", "Ettayapuram-TDK", "Kayalpattinam",
+        "Tiruchendur", "Srivaikuntam", "Alwarthirunagari", "Authoor", "Nazareth",
+        "Manapad", "Uvari", "Periavilai", "Arumuganeri", "Kulasekarapatnam",
+        "Punnakayal", "Thoothukudi Port", "Thoothukudi Rural", "Mukuperi", "Punnaikayal",
+        "Meignanapuram", "Idinthakarai", "Keelakarai-TDK", "Kilakkarai-TDK", "Ervadi-TDK",
+        "Sayalkudi-TDK", "Mimisal-TDK", "Rameswaram-TDK", "Mandapam-TDK", "Paramakudi-TDK",
+        "Mudukulathur-TDK", "Kamudi-TDK", "Tiruvadanai-TDK", "Nainarkoil-TDK", "Muthukulathur-TDK",
+        "Ilayangudi-TDK", "Kalaiyarkoil-TDK", "Manamadurai-TDK", "Devakottai-TDK", "Tiruppattur-TDK",
+        "Karaikudi-TDK", "Sivaganga-TDK", "Kallal-TDK", "Tiruppuvanam-TDK", "Melur-TDK",
+        "Thirumangalam-TDK", "Usilampatti-TDK", "Vadipatti-TDK", "Peraiyur-TDK", "Sholavandan-TDK"
     ],
     "Pudukkottai": [
         "Karambakkudi", "Aranthangi", "Gandarvakottai", "Thiruvarankulam", "Illuppur",
-        "Ponnamaravathi", "Viralimalai", "Kudavasal", "Peravurani", "Orathanadu",
-        "Pattukottai", "Papanasam", "Kumbakonam", "Thiruvaiyaru", "Budalur",
-        "Seerkazhi", "Sirkazhi", "Mayiladuthurai", "Kuthalam", "Kollidam",
-        "Nagapattinam", "Vedaranyam", "Thiruthuraipoondi", "Thiruvidaimarudur", "Swamimalai",
-        "Darasuram", "Manamadurai", "Devakottai", "Tiruppattur", "Paramakudi",
-        "Rameswaram", "Mandapam", "Keelakarai", "Kilakkarai", "Ervadi",
-        "Ramanathapuram", "Mudukulathur", "Kalaiyarkoil", "Ilayangudi", "Kamudi",
-        "Tiruvadanai", "Nainarkoil", "Sayalkudi", "Mimisal", "Muthukulathur",
-        "Sivaganga", "Kallal", "Madurakoodam", "Tiruppuvanam", "Melur"
+        "Ponnamaravathi-PDK", "Viralimalai", "Kudavasal", "Peravurani-PDK", "Orathanadu-PDK",
+        "Pattukottai-PDK", "Papanasam-PDK", "Thiruvavaduthurai", "Thirubuvanam-PDK", "Budalur-PDK",
+        "Seerkazhi-PDK", "Swamimalai-PDK", "Darasuram-PDK", "Manamadurai-PDK", "Devakottai-PDK",
+        "Tiruppattur-PDK", "Paramakudi-PDK", "Rameswaram-PDK", "Mandapam-PDK", "Keelakarai-PDK",
+        "Kilakkarai-PDK", "Ervadi-PDK", "Ramanathapuram-PDK", "Mudukulathur-PDK", "Kalaiyarkoil-PDK",
+        "Ilayangudi-PDK", "Kamudi-PDK", "Tiruvadanai-PDK", "Nainarkoil-PDK", "Sayalkudi-PDK",
+        "Mimisal-PDK", "Muthukulathur-PDK", "Sivaganga-PDK", "Kallal-PDK", "Madurakoodam-PDK",
+        "Tiruppuvanam-PDK", "Melur-PDK", "Karambakkudi-PDK", "Aranthangi-PDK", "Gandarvakottai-PDK",
+        "Thiruvarankulam-PDK", "Illuppur-PDK", "Viralimalai-PDK", "Kudavasal-PDK", "Pudukkottai Town"
     ],
     "Ramanathapuram": [
-        "Rameswaram", "Mandapam", "Keelakarai", "Kilakkarai", "Ervadi",
-        "Ramanathapuram Town", "Mudukulathur", "Kalaiyarkoil", "Ilayangudi", "Kamudi",
-        "Tiruvadanai", "Nainarkoil", "Sayalkudi", "Mimisal", "Muthukulathur",
-        "Paramakudi", "Manamadurai", "Devakottai", "Tiruppattur", "Karaikudi",
-        "Sivaganga", "Kallal", "Madurakoodam", "Tiruppuvanam", "Melur",
-        "Thirumangalam", "Usilampatti", "Natham", "Nilakottai", "Batlagundu",
-        "Vadipatti", "Peraiyur", "Arupukkottai", "Sattur", "Virudhunagar",
-        "Srivilliputhur", "Rajapalayam", "Sivakasi", "Eral", "Ettayapuram",
-        "Kovilpatti", "Ottapidaram", "Thisayanvilai", "Kayalpattinam", "Tiruchendur",
-        "Srivaikuntam", "Alwarthirunagari", "Authoor", "Nazareth", "Manapad"
+        "Rameswaram", "Mandapam-RMN", "Keelakarai-RMN", "Kilakkarai-RMN", "Ervadi-RMN",
+        "Ramanathapuram Town", "Mudukulathur-RMN", "Kalaiyarkoil-RMN", "Ilayangudi-RMN", "Kamudi-RMN",
+        "Tiruvadanai-RMN", "Nainarkoil-RMN", "Sayalkudi-RMN", "Mimisal-RMN", "Muthukulathur-RMN",
+        "Paramakudi-RMN", "Manamadurai-RMN", "Devakottai-RMN", "Tiruppuvanam-RMN", "Melur-RMN",
+        "Thirumangalam-RMN", "Usilampatti-RMN", "Natham-RMN", "Vadipatti-RMN", "Peraiyur-RMN",
+        "Arupukkottai-RMN", "Virudhunagar-RMN", "Rajapalayam-RMN", "Eral-RMN", "Ottapidaram-RMN",
+        "Kovilpatti-RMN", "Thisayanvilai-RMN", "Kayalpattinam-RMN", "Tiruchendur-RMN", "Srivaikuntam-RMN",
+        "Alwarthirunagari-RMN", "Authoor-RMN", "Nazareth-RMN", "Manapad-RMN", "Uvari-RMN",
+        "Periavilai-RMN", "Arumuganeri-RMN", "Kulasekarapatnam-RMN", "Punnakayal-RMN", "Mukuperi-RMN",
+        "Punnaikayal-RMN", "Meignanapuram-RMN", "Idinthakarai-RMN", "Pamban", "Devipattinam"
     ],
     "Krishnagiri": [
-        "Hosur", "Pochampalli", "Bargur", "Denkanikottai", "Shoolagiri",
+        "Hosur", "Pochampalli", "Bargur-KRG", "Denkanikottai", "Shoolagiri",
         "Kelamangalam", "Mathigiri", "Thally", "Anchetty", "Rayakottah",
-        "Uthangarai", "Kaveripakkam", "Gudiyatham", "Vaniyambadi", "Ambur",
-        "Jolarpettai", "Tirupattur", "Natrampalli", "Dharmapuri", "Harur",
-        "Pappireddipatti", "Nallampalli", "Pennagaram", "Karimangalam", "Morappur",
-        "Palacodu", "Arcot", "Ranipet", "Walajah", "Sholinghur",
-        "Arakkonam", "Nemili", "Kanchipuram", "Uthiramerur", "Madurantakam",
-        "Chengalpattu", "Sriperumbudur", "Singaperumalkoil", "Walajabad", "Cheyyur",
-        "Thirukalukundram", "Kunrathur", "Poonamallee", "Thiruverkadu", "Maduravoyal",
-        "Korattur", "Pattabiram", "Nerkundram", "Koyambedu", "Arumbakkam"
+        "Uthangarai-KRG", "Kaveripakkam-KRG", "Gudiyatham-KRG", "Vaniyambadi-KRG", "Ambur-KRG",
+        "Jolarpettai-KRG", "Tirupattur-KRG", "Natrampalli-KRG", "Dharmapuri-KRG", "Harur-KRG",
+        "Pappireddipatti-KRG", "Nallampalli-KRG", "Pennagaram-KRG", "Karimangalam-KRG", "Morappur-KRG",
+        "Palacodu-KRG", "Kaveripattinam", "Berigai", "Krishnagiri Town", "Hosur Industrial",
+        "Veppanapalli", "Bargur North", "Bargur South", "Hosur North", "Hosur South",
+        "Pochampalli North", "Pochampalli South", "Kelamangalam-KRG", "Mathigiri-KRG", "Rayakottah-KRG",
+        "Thally-KRG", "Anchetty-KRG", "Denkanikottai-KRG", "Shoolagiri-KRG", "Sulagiri",
+        "Uthangarai North", "Uthangarai South", "Hosur East", "Hosur West", "Krishnagiri Rural"
     ],
     "Tiruvannamalai": [
-        "Polur", "Arni", "Cheyyar", "Vandavasi", "Tiruvanamalai Town",
-        "Chengam", "Thandrampet", "Vembakkam", "Pudupalayam", "Thellar",
-        "Chetpet", "Kilpennathur", "Keelpennathur", "Arani", "Jawadhu Hills",
-        "Jamunamarathur", "Alangayam", "Natrampalli", "Tirupattur", "Jolarpettai",
-        "Ambur", "Vaniyambadi", "Gudiyatham", "Krishnagiri", "Hosur",
-        "Pochampalli", "Bargur", "Denkanikottai", "Shoolagiri", "Kelamangalam",
-        "Mathigiri", "Thally", "Anchetty", "Rayakottah", "Uthangarai",
-        "Dharmapuri", "Harur", "Pappireddipatti", "Nallampalli", "Pennagaram",
-        "Karimangalam", "Morappur", "Palacodu", "Arcot", "Ranipet",
-        "Walajah", "Sholinghur", "Arakkonam", "Nemili", "Kaveripakkam"
+        "Polur", "Arni-TVN", "Cheyyar-TVN", "Vandavasi-TVN", "Tiruvanamalai Town",
+        "Chengam", "Thandrampet", "Vembakkam-TVN", "Pudupalayam-TVN", "Thellar",
+        "Chetpet-TVN", "Kilpennathur", "Keelpennathur", "Arani-TVN", "Jawadhu Hills",
+        "Jamunamarathur", "Alangayam-TVN", "Natrampalli-TVN", "Tirupattur-TVN", "Jolarpettai-TVN",
+        "Ambur-TVN", "Vaniyambadi-TVN", "Gudiyatham-TVN", "Pennathur", "Thandrampet-TVN",
+        "Polur-TVN", "Chengam-TVN", "Pudupalayam North", "Pudupalayam South", "Thellar-TVN",
+        "Kilpennathur-TVN", "Keelpennathur-TVN", "Jawadhu Hills North", "Jawadhu Hills South", "Jamunamarathur-TVN",
+        "Tiruvannamalai East", "Tiruvannamalai West", "Tiruvannamalai North", "Tiruvannamalai South", "Tiruvannamalai Central",
+        "Polur North", "Polur South", "Arni North", "Arni South", "Cheyyar North",
+        "Cheyyar South", "Vandavasi North", "Vandavasi South", "Pennathur-TVN", "Chetpet North"
     ],
 }
 
@@ -327,12 +327,13 @@ async def db_insert_fault(record: dict) -> None:
 # PROBE ENGINE
 def simulate_probe(segment: str) -> tuple[float, float]:
     rtt  = BASELINE_RTT[segment] + random.uniform(-0.5, 0.5)
-    loss = random.uniform(0.0, 1.5)
+    loss = 0.0  # always zero for healthy villages
     return round(rtt, 2), round(loss, 1)
 
+
 def get_status(rtt: float, loss: float) -> str:
-    if loss >= 80:               return "FAILED"
-    if loss >= 20 or rtt >= 100: return "DEGRADED"
+    if loss >= 80:                return "FAILED"
+    if loss >= 20 or rtt >= 500: return "DEGRADED"
     return "HEALTHY"
 
 
@@ -657,6 +658,7 @@ async def simulate_fault(
             seg["loss"]    = values["loss"]
             seg["status"]  = get_status(values["rtt"], values["loss"])
             seg["updated"] = datetime.now().strftime("%H:%M:%S")
+            seg["injected"] = True
             break
 
     # Map fault_type to human-readable root_cause and action for history
@@ -707,6 +709,7 @@ async def clear_faults(village: str | None = Query(default=None)):
                 seg["loss"]    = loss
                 seg["status"]  = get_status(rtt, loss)
                 seg["updated"] = datetime.now().strftime("%H:%M:%S")
+                seg["injected"] = False
         active_faults.pop(v, None)
 
     if not village:

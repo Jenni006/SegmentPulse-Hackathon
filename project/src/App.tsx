@@ -79,12 +79,12 @@ function App() {
         return null;
       }
     },
-    30000
+    60000
   );
 
   const { data: history, refetch: refetchHistory } = usePolling(
     () => apiService.getFaultHistory(),
-    30000
+    60000
   );
 
   const isConnected = failCount < 3;

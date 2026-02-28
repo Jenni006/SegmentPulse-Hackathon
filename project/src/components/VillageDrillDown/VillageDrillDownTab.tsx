@@ -35,7 +35,7 @@ export function VillageDrillDownTab({ overview, selectedDistrict, onFaultInjecte
       }
       return null;
     },
-    10000,
+    30000,
     !!selectedVillage
   );
 
