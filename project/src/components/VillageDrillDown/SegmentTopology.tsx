@@ -1,14 +1,14 @@
 import { ArrowRight } from 'lucide-react';
-import type { SegmentHealth } from '../../types';
+import type { SegmentHealth, SegmentStatus } from '../../types';
 
 interface SegmentTopologyProps {
   segments: SegmentHealth[];
 }
 
 export function SegmentTopology({ segments }: SegmentTopologyProps) {
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: SegmentStatus) => {
     switch (status) {
-      case 'FAULT':
+      case 'FAILED':
         return 'border-fault bg-fault text-white';
       case 'DEGRADED':
         return 'border-warning bg-warning text-black';
@@ -51,3 +51,4 @@ export function SegmentTopology({ segments }: SegmentTopologyProps) {
     </div>
   );
 }
+

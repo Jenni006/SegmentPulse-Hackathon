@@ -11,8 +11,21 @@ const API_BASE_URL = 'http://127.0.0.1:8000';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000,
+  timeout: 8000,
 });
+
+// Prevent hammering
+let lastDiagnosisCall = 0;
+
+export const runDiagnosisSafe = async (): Promise<DiagnosisResult> => {
+  const now = Date.now();
+  if (now - lastDiagnosisCall < 15000) {
+    throw new Error('Rate limited');
+  }
+  lastDiagnosisCall = now;
+  const response = await api.post<DiagnosisResult>('/run-diagnosis');
+  return response.data;
+};
 
 export const apiService = {
   async getNetworkOverview(): Promise<NetworkOverview> {

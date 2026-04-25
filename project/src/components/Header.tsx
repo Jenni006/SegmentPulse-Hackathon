@@ -15,15 +15,12 @@ export function Header({ isConnected, lastUpdated }: HeaderProps) {
             <h1 className="text-3xl font-heading font-bold text-accent">
               SegmentPulse
             </h1>
-            <span className="bg-orange text-background px-3 py-1 rounded text-sm font-bold">
-              TANFINET
-            </span>
           </div>
         </div>
 
         <div className="flex-1 flex justify-center">
           <h2 className="text-lightText text-sm font-mono">
-            Automated Fault Localization — 12,525 Villages
+            Automated Fault Localization 
           </h2>
         </div>
 
