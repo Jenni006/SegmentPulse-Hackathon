@@ -1,10 +1,10 @@
-# 🚀 SegmentPulse-Hackathon
+# SegmentPulse-Hackathon
 
 **SegmentPulse** is an intelligent **Fiber Network Fault Diagnosis & Management System** designed for telecommunications infrastructure. It provides real-time network monitoring, automated fault detection, root cause analysis, and an intuitive dashboard for managing large-scale fiber optic networks across multiple districts and villages.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -21,7 +21,7 @@
 
 ---
 
-## 🎯 Overview
+## Overview
 
 **SegmentPulse** addresses critical challenges in fiber network management by providing:
 
@@ -34,7 +34,7 @@
 
 ---
 
-## ✨ Features
+## Features
 
 ### Dashboard Features
 1. **Network Overview Tab**
@@ -70,7 +70,7 @@
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -112,7 +112,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React 18.3** - UI framework
@@ -137,7 +137,7 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 SegmentPulse-Hackathon/
@@ -184,7 +184,7 @@ SegmentPulse-Hackathon/
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 - Docker & Docker Compose (recommended)
@@ -239,7 +239,7 @@ npm run build
 
 ---
 
-## 💻 Usage
+## Usage
 
 ### Access the Dashboard
 1. Open browser to **http://localhost:3000**
@@ -261,7 +261,7 @@ curl http://localhost:8000/health
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Network Status
 | Endpoint | Method | Description |
@@ -299,7 +299,7 @@ curl -X POST http://localhost:8000/clear-faults
 
 ---
 
-## 🔧 Fault Injection & Testing
+## Fault Injection & Testing
 
 ### Using the CLI Tool
 
@@ -334,7 +334,7 @@ curl -X POST http://localhost:8000/clear-faults
 
 ---
 
-## 🎨 Components Overview
+## Components Overview
 
 ### Frontend React Components
 
@@ -375,7 +375,7 @@ curl -X POST http://localhost:8000/clear-faults
 
 ---
 
-## 🌐 Key Technologies Deep Dive
+## Key Technologies Deep Dive
 
 ### FastAPI Backend Architecture
 - **Asynchronous Request Handling**: Non-blocking I/O for high concurrency
@@ -397,7 +397,7 @@ curl -X POST http://localhost:8000/clear-faults
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please:
 
@@ -409,20 +409,20 @@ Contributions are welcome! Please:
 
 ---
 
-## 📝 License
+## License
 
 This project is part of a hackathon submission. See LICENSE file for details.
 
 ---
 
-## 📧 Contact
+## Contact
 
 **Project Owner**: Jenni006  
 **GitHub**: [Jenni006/SegmentPulse-Hackathon](https://github.com/Jenni006/SegmentPulse-Hackathon)
 
 ---
 
-## 🎯 Future Enhancements
+## Future Enhancements
 
 - [ ] Multi-user authentication & role-based access control
 - [ ] Advanced analytics and ML-based fault prediction
